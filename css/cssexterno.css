@@ -1,0 +1,34 @@
+header {
+    background-color: cornflowerblue;
+}
+
+nav {
+    background-color: lightcoral;
+    text-align: center;
+}
+
+a {
+    background-color: wheat;
+}
+
+b {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+hr {
+    color: blue;
+
+}
+
+ul {
+    background-color: lightgreen;
+}
+
+li {
+    color: steelblue
+}
+
+input {
+    border-radius: 20px;
+    background-color: lightseagreen;
+}
