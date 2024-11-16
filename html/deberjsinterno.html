@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/estilodeberjs.css">
+
+    <script>
+        function concatenarTextos(texto1, texto2, elemSalida) {
+            document
+                .getElementById(elemSalida)
+                .innerText = document.getElementById(texto1).value + document.getElementById(texto2).value;
+        }
+
+        function setFuente(elemSalida, fuente) {
+            document.getElementById(elemSalida).style.fontFamily = fuente
+        }
+
+        function setFontSize(elemSalida, size) {
+            document.getElementById(elemSalida).style.fontSize = size;
+        }
+
+        function setTextAlign(elemSalida, align) {
+            document.getElementById(elemSalida).style.textAlign = align
+        }
+
+        function setFontStyle(elemSalida, style) {
+            document.getElementById(elemSalida).style.fontStyle = style
+        }
+        function setFontWeight(elemSalida, weight) {
+            document.getElementById(elemSalida).style.fontWeight = weight
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Concatenadora js</h1>
+    </header>
+    <nav>
+        <ol>
+            <li><a href="deberjsenlinea.html"> Js en linea</a></li>
+            <li><a href="deberjsinterno.html">Js interno</a></li>
+            <li><a href="deberjsexterno.html">Js externo</a></li>
+        </ol>
+    </nav>
+    <section>
+        <label id="label1" for="texto1"> Texto 1</label>
+        <textarea id="texto1"></textarea>
+        <label id="label2" for="texto2"> texto 2</label>
+        <textarea id="texto2"></textarea>
+        <br>
+        <button onclick="concatenarTextos('texto1','texto2','salida')">Concatenar
+        </button>
+        <button onclick="setFuente('salida','arial')">Fuente arial </button>
+        <button onclick="setFuente('salida','serif')">Fuente serif </button>
+        <button onclick="setFontSize('salida','60px')">T+</button>
+        <button onclick="setFontSize('salida','10px')">T-</button>
+        <button onclick="setTextAlign('salida','left')">izquierda</button>
+        <button onclick="setTextAlign('salida','center')">centrar</button>
+        <button onclick="setTextAlign('salida','right')">derecha</button>
+        <button onclick="setFontStyle('salida','italic')">italic</button>
+        <button onclick="setFontWeight('salida','bold')">bold</button>
+        <button
+            onclick="setFontStyle('salida','normal'); setFontWeight('salida','normal')">normal</button>
+        <hr>
+        <h2>Texto de salida</h2>
+
+        <p id=salida></p>
+
+
+
+
+    </section>
+    <footer></footer>
+
+</body>
+
+</html>

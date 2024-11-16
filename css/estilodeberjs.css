@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+    color: blue;
+}
+
+ul{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button{background-color: cornflowerblue;}
+a{
+    background-color: lightcoral;
+    color:black;
+}

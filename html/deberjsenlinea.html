@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/estilodeberjs.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Concatenadora js</h1>
+    </header>
+    <nav>
+        <ol>
+            <li><a href="deberjsenlinea.html"> Js en linea</a></li>
+            <li><a href="deberjsinterno.html">Js interno</a></li>
+            <li><a href="deberjsexterno.html">Js externo</a></li>
+        </ol>
+    </nav>
+    <section>
+        <label id="label1" for="texto1"> Texto 1</label>
+        <textarea id="texto1"></textarea>
+        <label id="label2" for="texto2"> texto 2</label>
+        <textarea id="texto2"></textarea>
+        <br>
+        <button
+            onclick=" document
+                        .getElementById('salida')
+                        .innerText = document.getElementById('texto1').value + document.getElementById('texto2').value">Concatenar
+        </button>
+        <button onclick="document.getElementById('salida').style.fontFamily = 'arial'">Fuente arial </button>
+        <button onclick="document.getElementById('salida').style.fontFamily = 'serif'">Fuente serif </button>
+        <button onclick="document.getElementById('salida').style.fontSize = '60px'">T+</button>
+        <button onclick="document.getElementById('salida').style.fontSize = '10px'">T-</button>
+        <button onclick="document.getElementById('salida').style.textAlign = 'left'">izquierda</button>
+        <button onclick="document.getElementById('salida').style.textAlign = 'center'">centrar</button>
+        <button onclick="document.getElementById('salida').style.textAlign = 'right'">derecha</button>
+        <button onclick="document.getElementById('salida').style.fontStyle = 'italic'">italic</button>
+        <button onclick="document.getElementById('salida').style.fontWeight = 'bold'">bold</button>
+        <button onclick="document.getElementById('salida').style.fontStyle = 'italic'">italic</button>
+        <button onclick="document.getElementById('salida').style.fontStyle = 'normal'; document.getElementById('salida').style.fontWeight ='normal' ">normal</button>
+        <hr>
+        <h2>Texto de salida</h2>
+
+        <p id=salida></p>
+
+
+
+
+    </section>
+    <footer></footer>
+
+</body>
+
+</html>
