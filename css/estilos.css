@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculadora{
+    display: grid;
+    grid-template-columns: 75px  75px  75px  75px ;
+    grid-template-rows: 75px  75px  75px  75px  75px  75px;
+    padding: 15px;
+    border-radius: 15px;
+    border:solid cornflowerblue;
+    background-color: rgb(200,200,255);
+    box-shadow: 30px 30px 5px 5px rgb(40,50,60);
+    
+}
+
+.display{
+    text-align: right;
+    padding: 5px;
+    border: solid  black;
+    margin-bottom: 10px;
+    grid-column: span 4;
+    background-color: rgb(150,150,150);
+    border-radius: 5px;
+    font-size: 32px;
+}
+.botonDobleEspacio{
+    grid-column: span 2;
+}

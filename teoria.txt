@@ -1,0 +1,27 @@
+Maquetacion de paginas web /20-11-2024
+estrcuturar organizar o diseñar el contenido *visual* de una pagina web
+Los usuarios vizualizan 2 cosas los elementos html y los estilos css 
+javascript no se visualiza de forma directa. 
+
+Estructura de la calculadora 
+
+
+| [        ] | label/ input  
+|------------|
+|[ ][c][<][%]| /button 
+|[7][8][9][X]|
+|[4][5][6][-]|
+|[1][2][3][+]|
+|[ ][0][.][=]|
+
+El elemento div se usa para hacer agrupaciones de varios elementos. 
+Tambien sirve para hacer separaciones no visuales. 
+dentro de la maquetacion se usa mucho el elemento div. 
+Tambien permite dar contornos dentro de la pagina web
+
+para llegar a la maquetacion debo tener al menos un diseño en mente. 
+
+Siempre el contenido principal tiene que estar envuelto en una division 
+
+display flex, permite manipular de forma flexible el contenido de un contenedor
+display grid permite que el contenido se distribuya en una cuadricula. 
