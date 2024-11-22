@@ -25,3 +25,21 @@ Siempre el contenido principal tiene que estar envuelto en una division
 
 display flex, permite manipular de forma flexible el contenido de un contenedor
 display grid permite que el contenido se distribuya en una cuadricula. 
+
+
+21/11/2024
+para resaltar un elemento css es comun usar un color mas claro que mantenga el contraste. 
+
+para declarar un objeto en js 
+const e :{
+    nombre:"Edison",
+    apellido:"Cayambe",
+    direccion:{
+        calle:"America"
+    }
+}
+
+
+Una vez que tengo maquetada la pagina se empieza a dar comportamiento con js
+
+

@@ -29,3 +29,24 @@
 .botonDobleEspacio{
     grid-column: span 2;
 }
+
+button{
+    cursor:pointer;
+    margin:3px;
+    padding: 2px;
+    border: solid darkviolet;
+    font-size: 25px;
+    font-family: monospace;
+    background-color: lightcoral;
+    border-radius: 45px;
+    box-shadow: 2px 2px 2px;
+}
+
+button:hover{
+    color: white;
+    border-color: white;
+  
+}
+button:active{
+    background-color: white;
+}
