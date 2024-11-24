@@ -1,0 +1,44 @@
+.contianer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+body{
+    background-color: #59abe3; 
+}
+
+p:before{
+    content: attr(type);
+    display: block;
+    margin: 3px;
+    font-size: 20px;
+    color: #14023f;
+}
+
+input{
+    width: 250px;
+    border: none;
+    border-bottom: 5px solid #14023f;
+    background-color: transparent;
+}
+
+input:focus{
+    outline: #326080;
+}
+
+h2{
+    margin: 10px 2px;
+    width: 180px;
+    border-bottom:  3px solid black;
+}
+
+form{
+    width: 300px;
+    height: 425px;
+    background-color: #e6e6e6;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 10px 10px 10px 10px;
+}
