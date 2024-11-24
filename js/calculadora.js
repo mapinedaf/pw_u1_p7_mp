@@ -1,77 +1,119 @@
 var num1 = 0;
-var num2 = 0; 
-var operacion = ''; 
+var num2 = 0;
+var operacion = '';
 
 
-function setearValor (valor){
+function setearValor(valor) {
 
-    if(valor ===" "){
-        num1 =0
-        num2 =0
-        operacion=''
+    if (valor === " ") {
+        num1 = 0
+        num2 = 0
+        operacion = ''
     }
-    
-    if( "+-*/".includes(valor)){
-        operacion= valor
-        num1 = num2
+
+    if ("+-*/".includes(valor)) {
+        operacion = valor
+        num1 = document.getElementById("id-display").innerText
         document.getElementById("id-display").innerText = valor;
-    }else{
-       
+    } else {
+
         document.getElementById("id-display").innerText = valor;
         num2 = valor;
     }
 
-    console.log("num 1: " +num1)
-    console.log("num 2: "+num2)
-    console.log("operacion : "+operacion)
+    console.log("num 1: " + num1)
+    console.log("num 2: " + num2)
+    console.log("operacion : " + operacion)
 
 }
 
-function concatenarValor(valor){
-    valor1 =  document.getElementById("id-display");
-    valor1.innerText= valor1.innerText + valor;
+function concatenarValor(valor) {
+
+    display = document.getElementById("id-display")
+    if (valor === " ") {
+        num1 = 0
+        num2 = 0
+        operacion = ''
+    }
+    else {
+        if ("*+-/".includes(valor)) {
+            operacion = valor;
+        }
+        valor1 = document.getElementById("id-display");
+        valor1.innerText = valor1.innerText + valor;
+    }
+
 }
 
-function popText(){
-    valor = document.getElementById("id-display").innerText.slice(0,-1);
+function popText() {
+    valor = document.getElementById("id-display").innerText.slice(0, -1);
     document.getElementById("id-display").innerText = valor;
 }
 
-function evaluar(){
 
-    operacion = document.getElementById("id-display").innerText;
-    valorfinal =''
-    if(operacion.includes("/")){
-        const partes = operacion.split("/")
-        valorfinal = operacion[0] / operacion[1]
-        console.log(partes)
-    }else if(operacion.includes("+")){
+function evaluarConcatenado() {
+
+    display = document.getElementById("id-display");
 
 
-    }else if(operacion.includes("-")){
+    //existe almenos una operacion
+    if (display.innerText.includes("/")
+        | display.innerText.includes("*")
+        | display.innerText.includes("+")
+        | display.innerText.includes("-")) {
 
-    }else if(operacion.includes("*")){}
+        console.log("operacion: " + operacion);
+        calculo = 0;
+        operandos  = [];
+        //Separando los operandos 
+        switch (operacion) {
+            case "*":
+                operandos = display.innerText.split("*");
+                calculo = parseInt(operandos[0])*parseInt(operandos[1]);
+
+                break;
+            case "/":
+                operandos = display.innerText.split("/")
+                calculo = parseInt(operandos[0])/parseInt(operandos[1]);
+                break;
+            case "+":
+                operandos = display.innerText.split("+")
+                calculo = parseInt(operandos[0])+parseInt(operandos[1]);
+                break;
+            case "-":
+                operandos = display.innerText.split("-")
+                calculo = parseInt(operandos[0])-parseInt(operandos[1]);
+                break;
+        }
+
+        display.innerText = operandos.length ===2? calculo: "error"; 
+
+        console.log(operandos);
+        console.log(calculo);
+
+    }
 
 
-    document.getElementById("id-display").innerText = valorfinal
+
 }
 
-function evaluar2(){
 
-        display = document.getElementById("id-display");
+function evaluar2() {
 
-        newnum = 0
-    if(operacion ==="+"){
-        newnum =  parseInt(num1) + parseInt(num2);
+    display = document.getElementById("id-display");
+    num2 = display.innerText
+    newnum = 0
+    if (operacion === "+") {
+        newnum = parseInt(num1) + parseInt(num2);
         display.innerText = newnum;
-    }else if(operacion ==="-"){
-        newnum =  parseInt(num1) - parseInt(num2);
+    } else if (operacion === "-") {
+        newnum = parseInt(num1) - parseInt(num2);
         display.innerText = newnum;
-    }else if(operacion ==="*"){
-        newnum =  parseInt(num1) * parseInt(num2);
+    } else if (operacion === "*") {
+        newnum = parseInt(num1) * parseInt(num2);
         display.innerText = newnum;
-    }else if(operacion ==="/"){
-        newnum =  parseInt(num1) / parseInt(num2);
+    } else if (operacion === "/") {
+        newnum = parseInt(num1) / parseInt(num2);
         display.innerText = newnum;
     }
 
