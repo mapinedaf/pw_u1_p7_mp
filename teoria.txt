@@ -43,3 +43,6 @@ const e :{
 Una vez que tengo maquetada la pagina se empieza a dar comportamiento con js
 
 
+27/11/2024
+
+
